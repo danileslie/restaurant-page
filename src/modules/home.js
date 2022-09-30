@@ -13,8 +13,7 @@ const homePage = () => {
 
 const loadHome = () => {
     header();
-    const bHeader = document.getElementById('p-header');
-    const content = document.getElementById('content');
+    const bHeader = document.getElementById('header');
     bHeader.appendChild(homePage());
 }
 
