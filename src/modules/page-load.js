@@ -1,6 +1,6 @@
 import '../styles.css';
-
-
+import loadContact from './contact-us.js';
+import loadTabsTest from './tabs';
 
    const createContent = () => {
     const content = document.createElement('div');
@@ -31,11 +31,19 @@ import '../styles.css';
         });
 
         document.addEventListener("DOMContentLoaded", () => {
-            let tabs = document.querySelectorAll('.tabs');
-            tabs.forEach((tab) =>
-  tab.addEventListener("click", () => {
-    console.log(tab.textContent);
-  }));
+            loadContact();
+            let tabs = document.querySelectorAll('.navs > li');
+            for (let li of tabs) {
+                
+                li.addEventListener("click", () => {
+                    for (let li of tabs) {
+                        li.classList.remove('active');    
+                    }    
+                    li.classList.add('active');
+            });
+            
+        };
+        loadTabsTest();
         });
 
         pageHeader.appendChild(ul);
