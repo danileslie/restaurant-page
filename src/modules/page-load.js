@@ -1,5 +1,6 @@
 import '../styles.css';
 import loadContact from './contact-us.js';
+import loadTestPage from './testpage';
 import loadTabsTest from './tabs';
 
    const createContent = () => {
@@ -11,44 +12,61 @@ import loadTabsTest from './tabs';
    const header = () => {
     
     createContent();
-        const pageHeader = document.createElement('div');
-        const navItems = ['Home', 'Menu', 'Contact Us'];
-        const ul = document.createElement('ul');
-        
-        ul.setAttribute('class', 'navs');
 
+        const pages = document.querySelectorAll('data-content');
+        const pageHeader = document.createElement('header');
         pageHeader.setAttribute('id', 'header');
+        pageHeader.innerHTML = `
+        <nav>
+            <ul class="tabs">
+            <li data-value='#home'>Home</li>
+            <li data-value='#menu'>Menu</li>
+            <li data-value='#contact'>Contact Us</li>
+            </ul>
+            `
+    //     const navItems = ['Home', 'Menu', 'Contact Us'];
+    //     const navData = ['tab1', 'tab2', 'tab3'];
+    //     const ul = document.createElement('ul');
+        
+    //     ul.setAttribute('class', 'navs');
+
+        // pageHeader.setAttribute('id', 'header');
     
         const headerText = document.createElement('h1');
         headerText.textContent = 'The Busy Behemoth';
         headerText.classList.add('blueTest');
+        
 
-        navItems.forEach((item) => {
-            let li = document.createElement('li');
-            li.classList.add('tabs');
-            ul.appendChild(li);
-            li.innerHTML = item;
-        });
+    //     navItems.forEach((item) => {
+    //         let li = document.createElement('li');
+    //         li.setAttribute('id', navData);
+    //         li.classList.add('tabs');
+    //         ul.appendChild(li);
+    //         li.innerHTML = item;
+    //     });
 
-        document.addEventListener("DOMContentLoaded", () => {
-            loadContact();
-            let tabs = document.querySelectorAll('.navs > li');
-            for (let li of tabs) {
+
+    //         loadContact();
+    //         let tabs = document.querySelectorAll('.navs > li');
+    //         for (let li of tabs) {
                 
-                li.addEventListener("click", () => {
-                    for (let li of tabs) {
-                        li.classList.remove('active');    
-                    }    
-                    li.classList.add('active');
-            });
+    //             li.addEventListener("click", () => {
+    //                 for (let li of tabs) {
+    //                     li.classList.remove('active');    
+    //                 }    
+    //                 li.classList.add('active');
+    //         });
             
-        };
-        loadTabsTest();
-        });
+    //     };
+    //     loadTabsTest();
 
-        pageHeader.appendChild(ul);
+
+    //     pageHeader.appendChild(ul);
         pageHeader.appendChild(headerText);
         content.appendChild(pageHeader);
+        loadContact();
+        loadTestPage();
+        loadTabsTest();
         
     }
 

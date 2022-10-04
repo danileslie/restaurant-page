@@ -13,14 +13,15 @@
     /* border: 2px solid goldenrod; */
 }
 
-.navs{
+.tabs{
     display: flex;
    list-style-type: none;
    gap: 30px;
    color: blue;
 }
 
-.active{
+.active[data-content], .active{
     color: greenyellow;
 }
+
 

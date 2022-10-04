@@ -1,51 +1,23 @@
-const loadTabs = () => {
+const loadTabsTest = () => {
 
-    let tabs = document.querySelectorAll('.navs > li');
-    let tabContents = document.querySelectorAll('.tabContents');
+const tabs = document.querySelectorAll('[data-value]')
+const tabInfos = document.querySelectorAll('[data-content]')
 
-    for (let tab of tabContents) {
-        tab.style.display = 'none';
-    }
 
-    for (let li of tabs) {
-        li.addEventListener("click", () => {
-            for (let li of tabs) {
-                if (!li.classList.contains('active')){  
-                    console.log(`Inactive is ${li.textContent}`);
-                }
-                else {
-                    console.log(`Active tab is ${li.textContent}`);
-                }  
-            }  
-            return;
-    });
-};
-};
-
-const loadTabsTest = (bbb, tabExample) => {
-    let tabs = document.querySelectorAll('.navs > li');
-    let tabContents = document.querySelectorAll('.tabContents');
-    tabExample = tabContents[0].id;
-    document.getElementById(tabExample).style.display = "none";
-    
-    // for (let tab of tabContents) {
-    //     tab.style.display = 'none';
-    // }
-
-    for (let li of tabs) {
-        li.addEventListener("click", () => {
-            for (let li of tabs) {
-                if (!li.classList.contains('active')){  
-                    console.log(`Inactive is ${li.textContent}`);
-                    document.getElementById(tabExample).style.display = "none";  
-                }
-                else {
-                    console.log(`Active tab is ${li.textContent}`);
-                    document.getElementById(tabExample).style.display = "block";
-                }  
-            }  
+tabs.forEach(tab => {
+   
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.value);
+    tabInfos.forEach((info) => {     
+        info.classList.remove('active');
+tabs.forEach((tab) => {
+    tab.classList.remove('active');
+})
         });
-    };
+        tab.classList.add('active');
+        target.classList.add('active');
+    })  
 }
+)};
 
 export default loadTabsTest;
