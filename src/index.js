@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import loadHome from './modules/home.js';
+import loadPage from './modules/page-load.js';
 
-loadHome();
+loadPage();
 
 
 

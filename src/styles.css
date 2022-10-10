@@ -20,8 +20,12 @@
    color: blue;
 }
 
-.active[data-content], .active{
+[data-content] {
+    display: none;
+}
+.active[data-content]{
     color: greenyellow;
+    display: block;
 }
 
 
