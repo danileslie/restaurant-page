@@ -7,13 +7,34 @@ const loadMenu = () => {
     menu.classList.add('tabContents');
     menu.innerHTML = `
         <div class='menu'>
+        <div class='menu-wrap wrap-left'>
             <div class='food-item'>
             <div class='food-blurb'>Festive treats for those who prefer to express their Starlight spirit through eating until they lose consciousness.</div>
-                <div class='food-title'>
-                    Starlight Donuts
+            <div class='food-title'>
+                Starlight Donuts
+            </div>
+            <img class='food-pic' src='./images/starlight-donuts.jpg' alt='a basket full of multi-coloured doughnuts'/>
+            <div class='price'>100 gil</div>
+            </div>
+
+            <div class='row-wrap'>
+                <div class='food-item'>
+                    <div class='food-blurb'>An indulgent meal of tender ovim meat wrapped around gooey cheese, battered and pan-fried in oil to give it its crispy, golden-brown shell.</div>
+                    <div class='food-title'>
+                     Ovim Cordon Bleu
+                    </div>
+                    <img class='food-pic' src='./images/ovim-cordon-bleu.jpg' alt='a basket full of multi-coloured doughnuts'/>
+                    <div class='price'>100 gil</div>
                 </div>
-                <img class='food-pic' src='./images/starlight-donuts.jpg' alt='a basket full of multi-coloured doughnuts'/>
+
+            <div class='food-item'>
+            <div class='food-blurb'>If you love yourself you won't order this. We legally cannot remove this from the menu.</div>
+                <div class='food-title'>
+                    Meol
+                </div>
+                <img class='food-pic' src='./images/meol.jpg' alt='a basket full of multi-coloured doughnuts'/>
                 <div class='price'>100 gil</div>
+            </div>
             </div>
 
             <div class='food-item'>
@@ -25,24 +46,11 @@ const loadMenu = () => {
                 <div class='price'>100 gil</div>
             </div>
 
-                <div class='food-item'>
-                <div class='food-blurb'>An indulgent meal of tender ovim meat wrapped around gooey cheese, battered and pan-fried in oil to give it its crispy, golden-brown shell.</div>
-                <div class='food-title'>
-                    Ovim Cordon Bleu
-                </div>
-                <img class='food-pic' src='./images/ovim-cordon-bleu.jpg' alt='a basket full of multi-coloured doughnuts'/>
-                <div class='price'>100 gil</div>
-            </div>
             
-            <div class='food-item'>
-            <div class='food-blurb'>If you love yourself you won't order this. We legally cannot remove this from the menu.</div>
-                <div class='food-title'>
-                    Meol
-                </div>
-                <img class='food-pic' src='./images/meol.jpg' alt='a basket full of multi-coloured doughnuts'/>
-                <div class='price'>100 gil</div>
-            </div>
+        </div>
 
+        <div class='menu-wrap wrap-right'>
+            
             <div class='food-item'>
             <div class='food-blurb'>A delicious pick-me up that unfortunately does nothing when attempting to revive the dead.</div>
                 <div class='food-title'>
@@ -52,15 +60,7 @@ const loadMenu = () => {
                 <div class='price'>100 gil</div>
             </div>
 
-            <div class='food-item'>
-            <div class='food-blurb'>A sweet tea that is guaranteed not to burn you from the inside out.</div>
-                <div class='food-title'>
-                    Black Mage's Black Magic Cassis Tea
-                </div>
-                <img class='food-pic' src='./images/black-mages-black-magic-cassis-tea-.jpg' alt='a basket full of multi-coloured doughnuts'/>
-                <div class='price'>100 gil</div>
-            </div>
-
+            <div class='row-wrap'>
             <div class='food-item'>
             <div class='food-blurb'>A sweet drink to remind you that a smile better suits a hero.</div>
                 <div class='food-title'>
@@ -77,7 +77,20 @@ const loadMenu = () => {
                 <img class='food-pic' src='./images/scholars-fairy-soda.jpg' alt='a basket full of multi-coloured doughnuts'/>
                 <div class='price'>100 gil</div>
             </div>
+            </div>
+
+            <div class='food-item'>
+            <div class='food-blurb'>A sweet tea that is guaranteed not to burn you from the inside out.</div>
+                <div class='food-title'>
+                    Black Mage's Black Magic Cassis Tea
+                </div>
+                <img class='food-pic' src='./images/black-mages-black-magic-cassis-tea-.jpg' alt='a basket full of multi-coloured doughnuts'/>
+                <div class='price'>100 gil</div>
+            </div>
+        
+            </div>
         </div>
+
     `;
     content.appendChild(menu);
 };

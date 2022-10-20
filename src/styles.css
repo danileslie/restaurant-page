@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+  }
+
 body{
     background-color: rgb(93, 133, 138);
     margin: 0; 
@@ -5,7 +9,11 @@ body{
 }
 
 #content{
-    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
 }
 
 .blueTest {
@@ -38,7 +46,32 @@ body{
     color: greenyellow;
     display: block;
 }
+.menu{ 
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    border: 2px solid green;
 
+}
+.menu-wrap, .row-wrap{
+    display: flex;   
+}
+
+.wrap-left, .wrap-right{
+border: 2px solid blue;
+width: 40vw;
+}
+
+.menu-wrap{
+    flex-direction: column;
+    align-items: center;   
+}
+
+.row-wrap{
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+}
 .food-title{
     color: rgb(226, 116, 135);
 }
@@ -46,13 +79,25 @@ body{
 .food-item{
     border: 2px solid goldenrod;
     margin-bottom: 1%;
+   width: 20rem;
+    height: 20rem;
+}
+
+.food-item > img{
+   width: 20rem;
+   height: 20rem;
+   border: 2px solid red;
+   object-fit: cover;
+}
+
+.food-blurb{
+    display: none;
 }
 
 .home-content{
     display: flex;
     text-align: center;
     gap: 10px;
-    border: 2px solid red;
 }
 
 .left{
@@ -92,4 +137,12 @@ text-align: center;
 
 .cafe-pic{
     width: 100%;
+    height: 79vh;
+}
+
+.footer{
+display: flex;
+justify-content: center;
+align-items: center;
+background-color:rgb(89, 90, 90);
 }

@@ -4,6 +4,7 @@ import loadContact from './contact-us.js';
 import loadHome from './home';
 import loadMenu from './menu';
 import loadTabs from './tabs';
+import loadFooter from './footer';
 
    const createContent = () => {
     const content = document.createElement('div');
@@ -34,6 +35,7 @@ import loadTabs from './tabs';
         loadContact();
         loadMenu();
         loadHome();
+        loadFooter();
         loadTabs();   
     }
 

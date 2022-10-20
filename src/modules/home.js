@@ -3,6 +3,8 @@ const loadHome = () => {
     const test = document.createElement('div');
     test.setAttribute('id', 'home');
     test.setAttribute('data-content', '');
+    test.classList.add('tabContents');
+    test.classList.add('active');
     test.innerHTML = `
     <div class='home-content'>
     <div class='left'>
