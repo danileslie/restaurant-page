@@ -8,12 +8,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
         title: 'Restaurant Dev',
+        filename: 'index.html',
     }),
   ],
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    path: path.resolve(__dirname, 'dist/'),
   },
   module: {
     rules: [
@@ -21,11 +21,24 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      // {
+      //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
+      //   // type: 'asset/resource',
+      //   use: 'file-loader',
+      // },  
+
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        // type: 'asset/resource',
-        use: 'file-loader',
-      },
+        test: /\.html$/i,
+        use: 'html-loader'
+    },
+    {
+        test: /\.(png|jpg)$/i,
+        type: 'asset/resource',
+        generator: {
+            filename: 'images/[name][ext]'
+        }
+    }
+
     ],
   },
 };
