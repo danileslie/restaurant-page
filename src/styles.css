@@ -146,6 +146,8 @@ li.active {
     border: 1px solid var(--gold);
 }
 
+/* menu */
+
 [data-content] {
     display: none;
 }
@@ -153,16 +155,14 @@ li.active {
     color: var(--gold);
     display: block;
 }
-.menu{ 
-    
-    width: 100vw;
-    justify-content: space-around;
-    border: 2px solid green;
 
+.menu{ 
+    width: 85vw;
+    justify-content: space-around;
+    margin: auto;
 }
 
 .wrap-left, .wrap-right{
-border: 2px solid blue;
 width: 40vw;
 }
 
@@ -176,26 +176,67 @@ width: 40vw;
     flex-direction: row;
     justify-content: space-between;
 }
+
 .food-title{
+    padding: 1rem;
+    font-size: 1.5rem;
     color: rgb(226, 116, 135);
 }
 
+.price{
+    padding: 1rem;
+}
+
 .food-item{
+    display: flex;
+    flex-direction: column;
     border: 2px solid var(--gold);
+    border-radius: 16px;
     margin-bottom: 1%;
    width: 20rem;
     height: 20rem;
+    text-align: center;
+    position: relative;
 }
 
 .food-item > img{
-   width: 20rem;
-   height: 20rem;
-   border: 2px solid red;
-   object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--gold);
+    border-top: 1px solid var(--gold);
 }
 
-.food-blurb{
-    display: none;
+.food-item .food-blurb{
+    visibility: hidden;
+   position: absolute;
+   left: 20rem;
+   bottom: 15rem;
+   width: 60%;
+   border: 1px solid goldenrod;
+   background: rgb(92, 125, 129);
+   border-radius: 16px;
+   z-index: 2;
+   padding: 3%;
+}
+
+.food-item:hover .food-blurb{
+    visibility: visible;
+}
+
+.contact-here{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.dont{
+    font-size: 1.5rem;
+}
+
+.egg{
+    border-radius: 16px;
+    border: 1px solid var(--gold);
 }
 
 .footer{

@@ -7,8 +7,10 @@ const loadContact = () => {
     contact.setAttribute('data-content', '');
     contact.classList.add('tabContents');
     contact.innerHTML = `
-    <img src="./images/eategg.webp" class="egg">
-    <p>Don't.</p>
+    <div class='contact-here'>
+    <img src='./images/eategg.webp' class='egg'>
+    <p class='dont'>Don't.</p>
+    </div>
     `;
     content.appendChild(contact);
 };
