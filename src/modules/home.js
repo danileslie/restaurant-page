@@ -18,15 +18,20 @@ const loadHome = () => {
     <div class ='phrase'>
     <h1>Best Food In All Of Eorzea!</h1>
 </div>
-        <p>A traveling restaurant dedicated to bringing you the most delicious food in all of Eorzea, The Busy Behemoth is committed to making sure that no meal here will be your last!</p> 
-        <p>The quality of our fresh foods and electrifying flavour will ensure that not even an ecliptic meteor will stop you from eating your fill.</p>
+        <p>A traveling restaurant dedicated to bringing you the most delicious food in all of Eorzea, The Busy Behemoth is committed to making sure that no meal here will be your last!
+        <br>
+        The quality of our fresh foods and electrifying flavour will ensure that not even an ecliptic meteor will stop you from eating your fill.</p>
     </div>
 
     <div class="location-hours">
         <div class='location'>
-            <p>Revenant's Toll, Mor Dhona</p> 
+        <img src='./images/flat_location_logo.svg' alt='location icon' class='location-icon'>
+            <p>Revenant's Toll 
+            <br>
+            Mor Dhona, Eorzea</p> 
         </div>
         <div class='hours'>
+        <img src='./images/time-outline.svg' alt='clock icon' class='hours-icon'>
             <p>10am-11pm</p>
         </div>
     </div>

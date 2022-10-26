@@ -15,11 +15,11 @@ import loadFooter from './footer';
    const header = () => {
     createContent();
         const pageHeader = document.createElement('header');
-        const headerText = document.createElement('h1');
+        const headerText = document.createElement('p');
 
         pageHeader.setAttribute('id', 'header');
         headerText.textContent = 'The Busy Behemoth';
-        headerText.classList.add('blueTest');
+        headerText.classList.add('title');
 
         pageHeader.innerHTML = `
         <nav>
