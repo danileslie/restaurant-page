@@ -3,7 +3,9 @@
     --darkblue: #4c6894;
     --gold: #daa520;
     --hover: #d7aaf7;
-    --background: #212324;     
+    --background: #212324;  
+    --food: #e27487;
+    --footer: #595a5a; 
 }
 
 *{
@@ -32,7 +34,7 @@ body{
     justify-content: space-between;
     padding: 0 2% 0 2%;
     align-items: center;
-    background-color: #4c6894;
+    background-color: var(--darkblue);
     border-bottom: 2px solid var(--gold);
 }
 
@@ -56,12 +58,8 @@ ul {
     font-weight: bold;
 }
 
- li:hover{
-    color: #d7aaf7;
- }
-
-li.active {
-    color: #d7aaf7;
+ li:hover, li.active{
+    color: var(--hover);
  }
 
 /* home */
@@ -180,7 +178,7 @@ width: 40vw;
 .food-title{
     padding: 1rem;
     font-size: 1.5rem;
-    color: rgb(226, 116, 135);
+    color: var(--food);
 }
 
 .price{
@@ -212,8 +210,8 @@ width: 40vw;
    left: 20rem;
    bottom: 15rem;
    width: 60%;
-   border: 1px solid goldenrod;
-   background: rgb(92, 125, 129);
+   border: 1px solid var(--gold);
+   background: var(--background);
    border-radius: 16px;
    z-index: 2;
    padding: 3%;
@@ -242,7 +240,7 @@ align-items: center;
 .footer{
 justify-content: center;
 align-items: center;
-background-color:rgb(89, 90, 90);
+background-color:var(--footer);
 }
 
 .footer-icon{

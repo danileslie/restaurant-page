@@ -2,12 +2,11 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
   entry: './src/index.js',
-  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
-        title: 'Restaurant Dev',
+        title: 'The Busy Behemoth',
         filename: 'index.html',
     }),
   ],
@@ -21,12 +20,6 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
-      // {
-      //   test: /\.(png|svg|jpg|jpeg|gif)$/i,
-      //   // type: 'asset/resource',
-      //   use: 'file-loader',
-      // },  
-
       {
         test: /\.html$/i,
         use: 'html-loader'
@@ -38,7 +31,6 @@ module.exports = {
             filename: 'images/[name][ext]'
         }
     }
-
     ],
   },
 };
